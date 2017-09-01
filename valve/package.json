@@ -1,0 +1,17 @@
+{
+  "name": "valve",
+  "description": "MQTT Valve Simulator",
+  "private": true,
+  "author": "Joe Juzl",
+  "version": "0.0.1",
+  "repository": "",
+  "scripts": {
+    "build": "browserify app.js -o build.js",
+    "start": "http-server"
+  },
+  "dependencies": {
+    "browserify": "14.4.0",
+    "http-server": "0.10.0",
+    "mqtt": "2.12.0"
+  }
+}

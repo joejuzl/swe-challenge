@@ -1,0 +1,18 @@
+version: '3'
+services:
+  valve:
+    image: swe-valve:latest
+    ports:
+      - '3001:8080'
+  sensor:
+    image: swe-sensor:latest
+    ports:
+      - '3000:8080'
+  controller:
+    image: swe-controller:latest
+    depends_on:
+      - broker
+  broker:
+    image: toke/mosquitto
+    ports:
+      - '9001:9001'
